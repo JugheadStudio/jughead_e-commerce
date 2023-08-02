@@ -131,6 +131,14 @@ code {
     monospace;
 }
 
+/* ============== Navbar ============== */
+
+.nav-profile-pic {
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 /* ============== Carousel ============== */
 .carousel-wrapper {
   border-radius: 10px;
