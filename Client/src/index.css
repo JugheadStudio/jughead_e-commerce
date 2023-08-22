@@ -1,4 +1,23 @@
 :root {
+  --jughead-primary-yellow: #FDCB58;
+  --jughead-inactive-grey: #C5C5C5;
+  --jughead-inactive-grey-dark: #5f5f5f;
+  --jughead-white: #E9F0FA;
+  --jughead-black: #000000;
+  --jughead-teal: #00BEA6;
+  --jughead-text-dark: #2A3554;
+
+  /* ============ Fonts ============ */
+  --font-small: 0.64rem;
+  --font-small2: 0.75rem;
+  --font-medium: 0.9rem;
+  --font-large: 1rem;
+  --font-xlarge: 1.25rem;
+  --font-xxlarge: 1.5rem;
+
+  --font-btn: 0.8rem;
+
+  /* ============ Bootstrap ============ */
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -117,13 +136,37 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 
+.btn {
+  display: inline-block;
+  padding: 8px 15px;
+  font-family: var(--bs-btn-font-family);
+  font-size: var(--font-btn);
+  font-weight: var(--bs-btn-font-weight);
+  line-height: var(--bs-btn-line-height);
+  color: var(--jughead-black);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--jughead-primary-yellow);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--jughead-primary-yellow);
+  background-color: var(--jughead-black);
+  border-color: var(--jughead-primary-yellow);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* montseratte */
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--font-medium);
 }
 
 code {
@@ -131,18 +174,193 @@ code {
     monospace;
 }
 
+/* ============== Global ============== */
+
+.active {
+  color: var(--jughead-primary-yellow);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.yellow {
+  color: var(--jughead-primary-yellow);
+}
+
+.teal {
+  color: var(--jughead-teal);
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
 /* ============== Navbar ============== */
 
+.navbar {
+  background-color: black;
+  color: var(--jughead-inactive-grey);
+  padding: 40px 0;
+}
+
+.navbar a {
+  color: var(--jughead-inactive-grey);
+  font-size: var(--font-medium);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--jughead-primary-yellow);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-links a:hover {
+  color: var(--jughead-white);
+}
+
 .nav-profile-pic {
-  width: 40px;
+  width: 35px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.login-user-nav {
+  margin-right: 30px;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  color: black;
+  background-color: var(--jughead-primary-yellow);
+  border-color: var(--jughead-primary-yellow);
+}
+
+.dropdown .btn:hover {
+  color: var(--jughead-primary-yellow);
+  background-color: transparent;
+  border-color: var(--jughead-primary-yellow);
+  box-shadow: 0 0 0 2px var(--jughead-primary-yellow);
+}
+
+.dropdown {
+  display: inline-block;
+  justify-content: end;
+}
+
+.dropdown .dropdown-menu {
+  width: 20rem;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  margin-right: -1px;
+  left: auto;
+  border: 1px solid var(--jughead-primary-yellow);
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.dropdown-profile-pic {
+  padding: 25px 15px 25px 25px;
+}
+
+.dropdown-profile-pic img {
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dropdown-username {
+  color: white;
+  padding: 25px 0;
+}
+
+.dropdown .dropdown-menu .dropdown-user a {
+  font-size: var(--font-medium);
+  color: var(--jughead-inactive-grey-dark);
+  text-decoration: none;
+  padding: 0;
+}
+
+.dropdown .dropdown-menu .dropdown-user a:hover {
+  color: var(--jughead-primary-yellow);
+
+}
+
+.dropdown .dropdown-menu .navbar-dropdown-links a {
+  font-size: var(--font-large);
+  padding: 10px 25px;
+}
+
+.dropdown .dropdown-menu .navbar-dropdown-links a:hover {
+  color: var(--jughead-primary-yellow);
+  background-color: transparent;
+}
+
+.user-dropdown {
+  border-radius: 30px;
+  padding: 5px 5px 5px 15px;
+  background-color: black;
+  border: 1px solid var(--jughead-primary-yellow);
+  color: var(--jughead-primary-yellow);
+  font-size: var(--font-medium);
+  align-items: center;
+  display: flex;
+}
+
+.dropdown-toggle::after {
+  display: none;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+/* ============== Footer ============== */
+
+.footer-container {
+  color: var(--jughead-inactive-grey-dark);
+  font-size: var(--font-medium);
+  margin: 80px auto;
+}
+
+.footer-container p {
+  margin: 0;
+}
+
+.footer-container strong {
+  color: var(--jughead-white);
+}
+
+.slash-divider {
+  margin: 0 10px !important;
+}
+
+.footer-nav {
+  height: 50px;
+}
+
+.footer-disclaimer {
+  font-size: var(--font-small2);
 }
 
 /* ============== Carousel ============== */
 .carousel-wrapper {
   border-radius: 10px;
   overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height:420px;
+  margin: auto;
 }
 
 .carousel-control-prev {
@@ -187,4 +405,332 @@ code {
 
 .carousel-control-next {
   right: 20px;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  left: auto;
+  bottom: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #fff;
+  text-align: center;
+  transform: translate(50%, -50%);
+}
+
+.carousel-image-container {
+  /* Set the container's width and height as per your requirement */
+  width: 100%;
+  height: 420px;
+  /* Center align the image within the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Apply object-fit to cover the container and hide any overflow */
+  overflow: hidden;
+  /* Set the background size to cover and position the image */
+  background-size: cover;
+  background-position: center; /* You can adjust this value to change the image position */
+}
+
+.carousel-1-caption {
+  color: black;
+}
+
+.carousel-2-caption {
+  color: black;
+}
+
+.carousel-3-caption {
+  color: black;
+}
+
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 8px;
+  margin-left: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: black;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity .6s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+
+element.style {
+}
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+}
+
+/* =============================================== */
+/*? ==================== HOME ==================== */
+/* =============================================== */
+
+.discover-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.discover-heading {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--jughead-white);
+  margin: 24px 0;
+  line-height: 60px;
+}
+
+.discover-line hr {
+  width: 100%;
+  background-color: var(--jughead-primary-yellow);
+  opacity: 1;
+  margin: 10px 0;
+}
+
+.discover-line hr:nth-child(1) {
+  height: 5px;
+}
+
+.discover-line hr:nth-child(2) {
+  height: 4px;
+}
+
+.discover-line hr:nth-child(3) {
+  height: 3px;
+}
+
+.discover-line hr:nth-child(4) {
+  height: 2px;
+}
+
+.home-quick-nav-container {
+  width: 100%;
+  height: 250px;
+  background-color: red;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-quick-nav-container:hover {
+  box-shadow: 0 0 0 2px var(--jughead-primary-yellow);
+  cursor: pointer;
+}
+
+.quick-nav-hover-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.quick-nav-hover-box p {
+  display: flex;
+  align-self: end;
+  color: var(--jughead-white);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+  transition: color 0.5s ease;
+}
+
+.quick-nav-hover-box:hover {
+  background-color: #0000009b;
+}
+
+.quick-nav-hover-box:hover p {
+  font-size: 25px;
+}
+
+.diveder-heading {
+  color: var(--jughead-black);
+  background-color: var(--jughead-primary-yellow);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 24px auto;
+}
+
+.diveder-heading h3 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* product card */
+
+.product-card {
+  background-color: var(--jughead-white);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.product-card img {
+  width: calc(100% - 60px);
+  margin-bottom: 10px;
+}
+
+.product-card .product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--jughead-black);
+}
+
+.product-card .product-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--jughead-teal);
+  margin-bottom: 15px;
+}
+
+/* =============================================== */
+/*? ================ Product Page ================ */
+/* =============================================== */
+
+.product-page-container {
+  background-color: var(--jughead-white);
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.breadcrumb a {
+  color: var(--jughead-inactive-grey-dark);
+  font-size: var(--font-small2);
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.breadcrumb span {
+  color: var(--jughead-inactive-grey-dark);
+  font-size: var(--font-small2);
+  margin-right: 5px;
+}
+
+.breadcrumb-item {
+  font-size: var(--font-small2);
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: var(--jughead-teal);
+  font-size: var(--font-small2);
+}
+
+.product-page-info {
+  color: var(--jughead-text-dark);
+}
+
+.product-page-info h2 {
+  color: var(--jughead-teal);
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.product-page-info h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.product-page-info p {
+  margin: 0;
+}
+
+.product-page-ul {
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+.product-main-image img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.product-thumbnails {
+  border-right: 1px solid var(--jughead-inactive-grey);
+}
+
+.product-thumbnails img {
+  width: 85px;
+  margin-bottom: 10px;
+}
+
+.product-thumbnails img:hover {
+  cursor: pointer;
+}
+
+.thumbnail-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.thumbnail-container.active {
+  border: 2px solid var(--jughead-teal);
+  border-radius: 10px;
+}
+
+.product-sizes {
+  padding: 0;
+}
+
+.product-sizes li {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--jughead-inactive-grey);
+  border: 2px solid var(--jughead-inactive-grey);
+  border-radius: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-sizes li.active{
+  color: var(--jughead-teal);
+  border: 2px solid var(--jughead-teal);
+}
+
+.size-button li:hover {
+  background-color: #2980b9;
+}
+
+.add-to-cart-btn {
+  background-color: var(--jughead-teal);
+  color: var(--jughead-white);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 60px;
+  font-size: var(--font-medium);
+  cursor: pointer;
+  transition: background-color 0.3s;  
 }

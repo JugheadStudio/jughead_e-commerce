@@ -1,34 +1,37 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
+import CarouselImage1 from "../images/carousel-1.png";
+import CarouselImage2 from "../images/carousel-2.png";
+import CarouselImage3 from "../images/carousel-3.png";
 
 export default function App() {
 return (
 	<div className='carousel-wrapper'>
     <Carousel>
 
-      <Carousel.Item interval={10000}>
-        <img className="d-block w-100" src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png" alt="Image One" />
-        <Carousel.Caption>
-          <h3>Premium NFT Merch</h3>
-          <p>Sample Text for Image One</p>
-        </Carousel.Caption>
+      <Carousel.Item interval={5000}>
+        <div className="carousel-image-container" style={{ backgroundImage: `url(${CarouselImage3})` }}>
+          <Carousel.Caption className='carousel-caption'>
+            <h3 className='carousel-1-caption'>Premium NFT Merch</h3>
+          </Carousel.Caption>
+        </div>
       </Carousel.Item>
 
-      <Carousel.Item interval={10000}>
-        <img className="d-block w-100" src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png" alt="Image Two" />
-        <Carousel.Caption>
-          <h3>Label for second slide</h3>
-          <p>Sample Text for Image Two</p>
-        </Carousel.Caption>
+      <Carousel.Item interval={5000}>
+        <div className="carousel-image-container" style={{ backgroundImage: `url(${CarouselImage1})` }}>
+          <Carousel.Caption className='carousel-caption'>
+            <h3 className='carousel-1-caption'>Premium NFT Merch</h3>
+          </Carousel.Caption>
+        </div>
       </Carousel.Item>
 
-      <Carousel.Item interval={10000}>
-        <img className="d-block w-100" src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122716/1-300x115.png" alt="Image Two" />
-        <Carousel.Caption>
-          <h3>Label for second slide</h3>
-          <p>Sample Text for Image Two</p>
-        </Carousel.Caption>
+      <Carousel.Item interval={5000}>
+        <div className="carousel-image-container" style={{ backgroundImage: `url(${CarouselImage2})` }}>
+          <Carousel.Caption className='carousel-caption'>
+            <h3 className='carousel-3-caption'>Premium NFT Merch</h3>
+          </Carousel.Caption>
+        </div>
       </Carousel.Item>
 
     </Carousel>
