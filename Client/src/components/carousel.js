@@ -10,7 +10,15 @@ return (
 	<div className='carousel-wrapper'>
     <Carousel>
 
-      <Carousel.Item interval={5000}>
+      <Carousel.Item interval={10000}>
+        <div className="carousel-image-container" style={{ backgroundImage: `url(${CarouselImage2})` }}>
+          <Carousel.Caption className='carousel-caption'>
+            <h3 className='carousel-1-caption'>Premium NFT Merch</h3>
+          </Carousel.Caption>
+        </div>
+      </Carousel.Item>
+
+      <Carousel.Item interval={10000}>
         <div className="carousel-image-container" style={{ backgroundImage: `url(${CarouselImage3})` }}>
           <Carousel.Caption className='carousel-caption'>
             <h3 className='carousel-1-caption'>Premium NFT Merch</h3>
@@ -18,16 +26,8 @@ return (
         </div>
       </Carousel.Item>
 
-      <Carousel.Item interval={5000}>
+      <Carousel.Item interval={10000}>
         <div className="carousel-image-container" style={{ backgroundImage: `url(${CarouselImage1})` }}>
-          <Carousel.Caption className='carousel-caption'>
-            <h3 className='carousel-1-caption'>Premium NFT Merch</h3>
-          </Carousel.Caption>
-        </div>
-      </Carousel.Item>
-
-      <Carousel.Item interval={5000}>
-        <div className="carousel-image-container" style={{ backgroundImage: `url(${CarouselImage2})` }}>
           <Carousel.Caption className='carousel-caption'>
             <h3 className='carousel-3-caption'>Premium NFT Merch</h3>
           </Carousel.Caption>

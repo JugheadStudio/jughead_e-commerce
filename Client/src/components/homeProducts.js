@@ -9,26 +9,21 @@ import { NavLink } from "react-router-dom";
 function HomeProducts() {
 
   const featuredProducts = [
-    { id: 1, name: 'Trippy Hoody', price: '$19.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 2, name: 'Trippy Hoody', price: '$29.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' }
+    { id: 'featured-01', name: 'Trippy Hoody', price: '$19.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'featured-02', name: 'Trippy Hoody', price: '$29.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'featured-03', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'featured-04', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'featured-05', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'featured-06', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' }
   ];
 
   const discountedProducts = [
-    { id: 1, name: 'Trippy Hoody', price: '$19.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 2, name: 'Trippy Hoody', price: '$29.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
-    { id: 3, name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' }
+    { id: 'discounted-01', name: 'Trippy Hoody', price: '$19.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'discounted-02', name: 'Trippy Hoody', price: '$29.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'discounted-03', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'discounted-04', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'discounted-05', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' },
+    { id: 'discounted-06', name: 'Trippy Hoody', price: '$39.99', image: 'hoody-placeholder.png', description: 'NFT Hoody' }
   ];
 
   return (

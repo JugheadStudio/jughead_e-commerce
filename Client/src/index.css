@@ -1,5 +1,6 @@
 :root {
   --jughead-primary-yellow: #FDCB58;
+  --jughead-primary-yellow-hover: #deaf43;
   --jughead-inactive-grey: #C5C5C5;
   --jughead-inactive-grey-dark: #5f5f5f;
   --jughead-white: #E9F0FA;
@@ -156,6 +157,10 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.btn-secondary {
+  background-color: var(--jughead-inactive-grey);
+}
+
 .btn:hover {
   color: var(--jughead-primary-yellow);
   background-color: var(--jughead-black);
@@ -192,8 +197,33 @@ code {
   color: var(--jughead-teal);
 }
 
+.btn-teal {
+  background-color: var(--jughead-teal);
+  color: var(--jughead-white);
+}
+
 .weight-700 {
   font-weight: 700;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* ============== Navbar ============== */
@@ -733,4 +763,94 @@ element.style {
   font-size: var(--font-medium);
   cursor: pointer;
   transition: background-color 0.3s;  
+}
+
+/* ========= Products ========= */
+.text-end {
+  text-align: end;
+}
+
+.product-table {
+  color: var(--jughead-black);
+  text-align: center;
+  padding: 0 20px;
+  margin-right: 20px;
+}
+
+.product-table p {
+  font-weight: 700;
+}
+
+.form-control {
+  background-color: white;
+}
+
+.accordion-button {
+  background-color: white;
+}
+
+.accordion-body {
+  background-color: white;
+}
+
+.accordion-body .form-control {
+text-align: center;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--jughead-black);
+  background-color: white;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.nav-tabs li {
+  margin: 0 10px;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--jughead-white);
+  background-color: var(--jughead-teal);
+  border: 1px solid var(--jughead-teal);
+}
+
+.nav-tabs .nav-link.active:hover {
+  color: var(--jughead-white);
+  background-color: var(--jughead-teal);
+  border: 1px solid var(--jughead-teal);
+}
+
+
+.nav-tabs .nav-link {
+  color: var(--jughead-black);
+  background-color: var(--jughead-primary-yellow);
+  border: 1px solid var(--jughead-primary-yellow);
+  border-radius: 10px;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--jughead-black);
+  background-color: var(--jughead-primary-yellow-hover);
+  border: 1px solid var(--jughead-primary-yellow-hover);
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: var(--jughead-white);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+  background-color: var(--jughead-white);
+  border-radius: 0 0 10px 10px;
 }
