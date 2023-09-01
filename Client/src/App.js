@@ -37,23 +37,21 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/clothing' element={<Clothing />} />
         <Route path='/prints' element={<Prints />} />
-        <Route path='/clothing/clothingProduct' element={<ClothingProduct />} />
+        {/* <Route path='/clothing/clothingProduct' element={<ClothingProduct />} /> */}
 
-
-        <Route path="/signup" exact element={<Signup />} />
         <Route path="/login" exact element={<Login />} />
-        <Route path="/" element={<Navigate replace to="login" />} />
-
-
-        {user && isAdmin && <Route path="/" exact element={<AdminConsole />} />}
-
-        <Route path="/admin" exact element={<AdminConsole />} />
         <Route path="/signup" exact element={<Signup />} />
-        <Route path="/login" exact element={<Login />} />
 
-        {user && isAdmin && <Route path="/" element={<Navigate replace to="/admin" />} />}
-        {user && !isAdmin && <Route path="/" element={<Navigate replace to="/home" />} />}
-        {!user && <Route path="/" element={<Navigate replace to="/login" />} />}
+        {user && isAdmin && <Route path="/admin" exact element={<AdminConsole />} />}
+
+        {!isAdmin && <Route path="/admin" element={<Navigate replace to="/" />} />}
+
+        {/* {!user && <Route path="/" element={<Navigate replace to="/login" />} />} */}
+        {/* <Route path="/" element={<Navigate replace to="/login" />} /> */}
+        {/* <Route path="/admin" exact element={<AdminConsole />} /> */}
+
+        {/* ========= Templates ========= */}
+        <Route path="/clothing/clothingProduct/:productId" element={<ClothingProduct />} />
       </Routes>
 
       <Footer />

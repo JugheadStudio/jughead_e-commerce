@@ -167,6 +167,20 @@
   border-color: var(--jughead-primary-yellow);
 }
 
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: white;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--jughead-teal);
+  font-size: var(--font-medium);
+}
+
+.form-control {
+  font-size: var(--font-medium);
+  margin-bottom: 15px;
+}
+
 body {
   margin: 0;
   /* montseratte */
@@ -646,10 +660,11 @@ element.style {
 /* =============================================== */
 
 .product-page-container {
-  background-color: var(--jughead-white);
+  background-color: white;
   border-radius: 10px;
   width: 100%;
   padding: 20px 30px;
+  min-height: calc(100vh - 180px);
 }
 
 .breadcrumb a {
@@ -845,12 +860,12 @@ text-align: center;
 }
 
 .modal-header {
-  background-color: var(--jughead-white);
+  background-color: white;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
 }
 
 .modal-body {
-  background-color: var(--jughead-white);
+  background-color: white;
   border-radius: 0 0 10px 10px;
 }

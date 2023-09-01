@@ -5,6 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import JugheadLogo from "../jughead-logo-primary.svg";
 
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 
@@ -12,10 +13,15 @@ function Navigation() {
 
   const navigate = useNavigate(); // Get the navigate function
 
+  const user = localStorage.getItem("token");
+  const isAdminValue = localStorage.getItem("isAdmin");
+  const isAdmin = JSON.parse(isAdminValue) || false;
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("isAdmin");
-    navigate("/login");
+    navigate("/");
+    window.location.reload();
   };
 
   return (
@@ -29,6 +35,7 @@ function Navigation() {
               <NavLink to="/" className='nav-link'>Home</NavLink>
               <NavLink to="/clothing" className='nav-link'>Clothing</NavLink>
               <NavLink to="/prints" className='nav-link'>Prints</NavLink>
+              <NavLink to="/accessories" className='nav-link'>Accessories</NavLink>
             </div>
 
             {/* cart */}
@@ -39,9 +46,12 @@ function Navigation() {
             </div>
 
             <div className='ml-auto'>
-              <button className='user-dropdown'>
-                <span className='login-user-nav'>Connect</span>
-              </button>
+
+              <Link to="/login">
+                <button className='user-dropdown'>
+                  <span className='login-user-nav'>Sign in</span>
+                </button>
+              </Link>
             </div>
 
             <div className='ml-auto'>
@@ -65,13 +75,14 @@ function Navigation() {
                   <div className='navbar-dropdown-links'>
                     <Dropdown.Item href="#/action-1">My Profile</Dropdown.Item>
                     <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      <NavLink to="/admin" className='nav-link'>Admin</NavLink>
-                    </Dropdown.Item>
-
-                    <NavLink to="/login" className="dropdown-item" onClick={handleLogout}>
+                    {user && isAdmin && 
+                    <Dropdown.Item as={Link} to="/admin">
+                      Admin
+                    </Dropdown.Item> 
+                    }
+                    <Dropdown.Item as={Link} to="/" onClick={handleLogout}>
                       Log Out
-                    </NavLink>
+                    </Dropdown.Item>
                   </div>
                 </Dropdown.Menu>
               </Dropdown>

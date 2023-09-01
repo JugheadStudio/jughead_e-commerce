@@ -4,6 +4,7 @@ const router = express.Router();
 
 //Create
 router.post('/api/product', async (req, res) => {
+  console.log(req.body)
   const product = new ProductSchema({ ...req.body });
   await product.save()
     .then(response => res.json(response))
@@ -42,8 +43,6 @@ router.patch('/api/product/:id', async (req, res) => {
     res.status(500).json(error);
   }
 });
-
-
 
 //Delete
 router.delete('/api/product/:id', async (req, res) => {
