@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+![Jughead E-Commerce Header Image](https://github.com/JugheadStudio/Github-assets/blob/main/E-Commerce_Term3/Github-header2.png?raw=true)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- - - -
 
-## Available Scripts
+# About Jughead
 
-In the project directory, you can run:
+Jughead is an NFT merch e-commerce website where you can purchase merch like t-shirts and hoodies created with graphics from our personal NFT collection.
 
-### `npm start`
+### Built With
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3.org/html/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/Overview.en.html)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://www.javascript.com/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/en)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Jughead Profile Screenshot](https://github.com/JugheadStudio/Github-assets/blob/main/E-Commerce_Term3/jughead%20screenshot.png?raw=true)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How To Install
 
-### `npm test`
+To get started, clone the repo:
+```
+git clone https://github.com/JugheadStudio/jughead_e-commerce
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigate to the 'client' folder to install all the dependencies
+```
+npm i
+```
 
-### `npm run build`
+Navigate to the 'server' folder to install all the dependencies
+```
+npm i
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run the build on your local host
+```
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run the MongoDB server
+```
+npm run dev
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+| Page                  | Description                                        |
+| --------------------- | -------------------------------------------------- |
+| Login Page            | - Allows all users to create a profile           |
+|                       | - Provides login functionality for registered users  |
+| Home Page             | - Allows users to see the latest and discounted products   |
+|                       | - Allows users to navigate to the different merch category pages |
+| Merch Category Pages  | - Allows users to see all the products related to each category |
+| Product Pages         | - Allows users to see all the product's info like materials, sizes, price etc. |
+| Admin Page            | - Allows admin users to add new items, remove old items or update existing items prices, stock etc. |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## More Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Admin Page
+![Admin Page Screenshot](https://github.com/JugheadStudio/Github-assets/blob/main/E-Commerce_Term3/Admin.png?raw=true)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Item Page
+![Item Page Screenshot](https://github.com/JugheadStudio/Github-assets/blob/main/E-Commerce_Term3/Item.png?raw=true)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Development Process
 
-## Learn More
+### Highlights
+* Highlights of the website are the simplistic UI and the functionality that gives the user a pleasant user experience.
+* The website is easy to understand and navigate.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Challenges
+* I did have some issues wrapping my head around how to debug this website as it was my first time using MongoDB
+* The main problem I had was that there were a few different files in the server and the front-end talking to each other and I wasn't always sure where the errors came from, but after playing around with it for a few hours, I was able to figure it out
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Implementations
 
-### Code Splitting
+* I would like to add image uploading to dynamically pull in the images with the rest of the product information
+* I would like to add cart functionality so that the user can add items to the cart and view them in the checkout
+* I would like to improve the UI more to make it more interactive and engaging
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Mockups
 
-### Analyzing the Bundle Size
+### Home Mockup
+![Jughead Home Mockup](https://github.com/JugheadStudio/Github-assets/blob/main/E-Commerce_Term3/Mockup-Home.jpg?raw=true)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Item Page Mockup
+![Jughead Item Page Mockup](https://github.com/JugheadStudio/Github-assets/blob/main/E-Commerce_Term3/Mockup-Item.jpg?raw=true)
 
-### Making a Progressive Web App
+### Admin Page Mockup
+![Jughead Admin Page Mockup](https://github.com/JugheadStudio/Github-assets/blob/main/E-Commerce_Term3/Mockup-Admin.jpg?raw=true)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Demonstration
+[Link To Demonstration Video](https://drive.google.com/file/d/1sgzRwtTf2Bnm8ioxiGXUaAu9S_Q_b6fe/view?usp=sharing)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### License
+[MIT](LICENSE) © Ruan Jordaan
